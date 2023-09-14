@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <h1>Etch-a-Sketch</h1>
+        <h3>CLick the box to toggle pen</h3>
+        <div id="board">
+            <div id="control">
+                <button id="clear" type="button">Clear</button>
+                <div id="size">
+                    <button id="createGrid" type="button">Apply</button>
+                    <div id="slider">
+                        <input type="range" id="gridSize" max="100" min="1" value="16">
+                        <span id="value">16</span>
+                    </div>
+                </div>
+            </div>
+            <div id="grid-box"></div>
+        </div>
+    </div>
+</body>
+</html>

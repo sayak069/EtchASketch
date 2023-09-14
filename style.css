@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Recursive:wght@300;400;500;600;700;800;900;1000&display=swap');
+/* css reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Coming Soon', cursive;
+}
+body{
+    background: lavender;
+}
+#container{
+    max-width: 1300px;
+    margin: 0px auto;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-family: 'Recursive', sans-serif;
+    text-align: center;
+    font-size: 4vw;
+    font-style: italic;
+    font-weight: 400;
+    color: brown;
+}
+h3{
+    font-weight: 300;
+    text-align: center;
+    font-style: italic;
+    color: deeppink;
+    font-size: 1.7vw;
+    margin: 2vw 0px;
+}
+/* grid section */
+#board{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7vw;
+    width: 100%;
+}
+#grid-box {
+    width: 49vw;
+    height: 49vw;
+    display: grid;
+    box-shadow: 1px 2px 8px rgb(171, 171, 171);
+    background: white;
+}
+/* control */
+#control{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6vw;
+    width: 25vw;
+}
+#size{
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+/* slider */
+#slider{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+input{
+    width: 22vw;
+}
+span{
+    font-size: 1.4vw;
+    color: seagreen;
+}
+/* buttons */
+#control button{
+    border-radius: 15px;
+    font-weight: 500;
+    padding: 1px;
+    font-size: 1vw;
+    border: 1px transparent;
+    background: rgb(241, 94, 94);
+    cursor: pointer;
+    opacity: 0.75;
+    transition: 0.2s ease-in;
+}
+#control button:hover{
+    color: white;
+    box-shadow: 1px 4px 5px rgb(171, 171, 171);
+    opacity: 1;
+}
+#control #clear{
+    background: rgb(67, 190, 231);
+}
+/* dynamic divs */
+.grid-item {
+    box-sizing: border-box;
+    border: 1px solid #e2e2e2;
+}
+.grid-item:hover{
+    background: lightgreen;
+}
+@media screen and (max-width:768px){
+    #board{
+        flex-direction: column-reverse;
+    }
+}
