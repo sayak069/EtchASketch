@@ -6,11 +6,12 @@
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/90ed2192c8.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="container">
         <h1>Etch-a-Sketch</h1>
-        <h3>CLick the box to toggle pen</h3>
+        <h3>Have fun swirling around</h3>
         <div id="board">
             <div id="control">
                 <button id="clear" type="button">Clear</button>
@@ -21,9 +22,19 @@
                         <span id="value">16</span>
                     </div>
                 </div>
+                <form id="colors">
+                    <input type="radio" name="color" id="draw" value="draw" checked onchange="changeColor()">
+                    <label for="draw" class="color-button">Draw</label>
+                    <input type="radio" name="color" id="eraser" value="eraser" onchange="erase(this)">
+                    <label for="eraser" class="color-button">Erase</label>
+                </form>
             </div>
             <div id="grid-box"></div>
         </div>
     </div>
+    <footer>
+        Made by Sayak
+        <a href="https://github.com/sayak069" target="_blank"><i class="fa-brands fa-github"></i></a>
+    </footer>
 </body>
 </html>

@@ -21,6 +21,7 @@ function createGrid() {
             gridItem.classList.add('grid-item');
             container.appendChild(gridItem);
         }
+        changeColor()
     }
 }
 // live value of slider
@@ -28,8 +29,7 @@ const span = document.getElementById('value')
 gridSizeInput.addEventListener('input', () => {
     span.textContent = gridSizeInput.value
 })
-// Change the color of all dynamically added divs
-container.addEventListener('click', changeColor)
+// Change the color
 function changeColor() {
     const dynamicDivs = document.querySelectorAll('#grid-box > div')
     dynamicDivs.forEach((div) => {
@@ -46,11 +46,21 @@ function getRandomColor() {
     }
     return color;
 }
-
+// erase
+function erase(radio){
+    if(radio.checked) 
+    {
+        document.querySelectorAll('#grid-box > div').forEach(div => {
+            div.addEventListener('mouseenter', () => {
+                div.setAttribute('style', 'background:white')
+            })
+        })
+    }
+}
 // clear divs
-const clear=document.getElementById('clear')
-clear.addEventListener('click',()=>{
-    document.querySelectorAll('#grid-box > div').forEach(div=>{
-        div.setAttribute('style','background:white')
+const clear = document.getElementById('clear')
+clear.addEventListener('click', () => {
+    document.querySelectorAll('#grid-box > div').forEach(div => {
+        div.setAttribute('style', 'background:white')
     })
 })
